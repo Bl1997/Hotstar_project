@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './Components/Navbar';
+import DevotionalShow from './Components/Pages/DevotionalShow';
+import Home from './Components/Pages/Home';
+import Latest from './Components/Pages/Latest';
+import MostWatched from './Components/Pages/MostWatched';
+import PopularMovies from './Components/Pages/PopularMovies';
+import PopularShows from './Components/Pages/PopularShows';
+import ImageSlider from './Components/slider/ImageSlider';
+import SuperHeroSlider from './Components/slider/SuperHeroSlider';
+import SuperHero from './Components/Pages/SuperHero';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='navbar'> <Navbar/></div>
+   
+      <ImageSlider/>
+   {/* <SuperHero/>
+   <PopularMovies/> */}
+   {/* <Latest/> */}
+   {/* <PopularShows/> */}
+   {/* <DevotionalShow/> */}
+   {/* <MostWatched/> */}
+
+   <Home/>
+   {/* <SuperHeroSlider/> */}
+   <SuperHero/>
+   
+    
+ 
+  
     </div>
   );
 }
