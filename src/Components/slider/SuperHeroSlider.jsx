@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -127,8 +128,8 @@ const SuperHeroSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-        Watch Super Heros Movies{" "}
+      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+      <Link to={"/superhero"}>  Watch Super Heros Movies</Link>
       </Text>
       <div className="imgslider">
         <Slider {...settings}>

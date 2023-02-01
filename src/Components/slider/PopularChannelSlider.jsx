@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Text } from "@chakra-ui/react";
+import {  Text } from "@chakra-ui/react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -39,8 +40,8 @@ const PopularChannelSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-     Popular Channel {" "}
+      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+   <Link to={"/popularchannel"}>Popular Channel </Link>
       </Text>
       <div className="imgslider">
         <Slider {...settings}>

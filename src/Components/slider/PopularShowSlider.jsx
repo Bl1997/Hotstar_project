@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -147,8 +148,8 @@ const PopularShowSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-        Popular Show{" "}
+      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+       <Link to={"/popularshow"}>Popular Show</Link>
       </Text>
       <div className="imgslider">
         <Slider {...settings}>

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Text } from "@chakra-ui/react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -39,8 +40,8 @@ const QuixSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-    Best Of Quix {" "}
+      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+  <Link to={"/bestofquix"}>Best Of Quix</Link>
       </Text>
       <div className="imgslider">
         <Slider {...settings}>
@@ -50,7 +51,7 @@ const QuixSlider = () => {
                 className="image_hover"
                 style={{
                   width: "100%",
-                  height: "220px",
+                  height: "20%",
                   padding: "5px",
                   borderRadius: "10px",
                 }}

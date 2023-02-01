@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {  Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-
-const SuperHero = () => {
+const InternetSuperStar = () => {
   const API_KEY = "AIzaSyAGlOnz0IKoW_2xtOU61nkADfnlhZEqrkc";
 
   const [data, setData] = useState([]);
-  
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
 
   useEffect(() => {
     axios
       .get(
-        ` https://www.googleapis.com/youtube/v3/search?q= Thor+Avengers+Spiderman full
-         Movies &key=${API_KEY}&part=snippet&maxResults=50&order=title`
+        ` https://www.googleapis.com/youtube/v3/search?q= internet superstar &key=${API_KEY}&part=snippet&maxResults=50&order=title`
       )
 
       .then((res) => setData(res.data.items));
@@ -32,7 +35,8 @@ const SuperHero = () => {
           color={"white"}
           textAlign="left"
         >
-          Best Of Super Heros
+       Internet Super Star
+         
         </Text>
       </div>
 
@@ -59,4 +63,4 @@ const SuperHero = () => {
   );
 };
 
-export default SuperHero;
+export default InternetSuperStar;

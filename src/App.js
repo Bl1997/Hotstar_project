@@ -10,6 +10,7 @@ import PopularShows from './Components/Pages/PopularShows';
 import ImageSlider from './Components/slider/ImageSlider';
 import SuperHeroSlider from './Components/slider/SuperHeroSlider';
 import SuperHero from './Components/Pages/SuperHero';
+import AllRoutes from './AllRoutes/AllRoutes';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
    {/* <DevotionalShow/> */}
    {/* <MostWatched/> */}
 
-   <Home/>
+   {/* <Home/> */}
    {/* <SuperHeroSlider/> */}
-   <SuperHero/>
+   {/* <SuperHero/> */}
+ <AllRoutes/>
    
     
  

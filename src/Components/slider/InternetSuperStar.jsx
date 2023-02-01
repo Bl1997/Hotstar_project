@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Text } from "@chakra-ui/react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 // const images = [
@@ -149,8 +150,8 @@ const InternetSuperStarSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-      Internet Super Star{" "}
+      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+   <Link to={"/internetsuperstar"}>   Internet Super Star</Link>
       </Text>
       <div className="imgslider">
         <Slider {...settings}>
@@ -160,7 +161,7 @@ const InternetSuperStarSlider = () => {
                 className="image_hover"
                 style={{
                   width: "100%",
-                  height: "210px",
+                  height: "100%",
                   padding: "5px",
                   borderRadius: "10px",
                 }}

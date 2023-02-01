@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Text } from "@chakra-ui/react";
+import {Link} from "react-router-dom"
 
 const images = [
   {
@@ -127,9 +128,10 @@ const LatestSlider = () => {
 
   return (
     <>
-      <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"}>
-      Latest & Trading{" "}
+          <Link to={"/latest"}> <Text textAlign={"left"} fontSize="2xl" fontWeight={"bold"} color="white" marginLeft={"15px"} cursor="pointer">
+ Latest & Trading
       </Text>
+      </Link>
       <div className="imgslider">
         <Slider {...settings}>
           {images.map((item, index) => (
